@@ -1,0 +1,16 @@
+.links {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+
+  .link {
+    text-decoration: none;
+    color: #12100c;
+  }
+}
+
+.button {
+  background-color: black;
+  color: white;
+  border: none;
+}
