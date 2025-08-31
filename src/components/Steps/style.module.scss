@@ -1,4 +1,27 @@
 .wrapper {
+  padding: 160px 10px;
   text-align: center;
-  background-color: aqua;
+}
+
+.bold {
+  font-size: 54px;
+  font-weight: 700;
+}
+
+.crossed {
+  color: #999795;
+  font-size: 54px;
+  font-weight: 400;
+  text-decoration: line-through;
+  max-width: 1077px;
+  margin: 0 auto;
+}
+
+@media (max-width: 1130px) {
+  .bold,
+  .crossed {
+    font-size: 34px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }
