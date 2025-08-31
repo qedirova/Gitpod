@@ -22,6 +22,48 @@
   border: none;
   padding: 6px 22px;
   border-radius: 12px;
-  font-size: 10px;
+  font-size: 14px;
   font-weight: 400;
+}
+
+.menuBtn {
+  display: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #ffae33;
+  z-index: 1;
+  height: 50vh !important;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #fff;
+  font-size: 40px;
+
+  .link {
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .links {
+    display: none;
+  }
+
+  .menuBtn {
+    display: block;
+    border: none;
+    background-color: transparent;
+  }
 }

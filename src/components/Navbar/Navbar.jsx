@@ -1,5 +1,8 @@
 import s from "./style.module.scss";
 import { Link } from "react-router-dom";
+import { RiMenuLine } from "react-icons/ri";
+import { GrClose } from "react-icons/gr";
+import { useState } from "react";
 
 export default function Navbar() {
   const navLinks = [
@@ -7,6 +10,9 @@ export default function Navbar() {
     { id: 2, title: "Pricing", href: "/pricing" },
     { id: 3, title: "Contact", href: "/contact" },
   ];
+
+  const [isNavActive, setIsNavActive] = useState(false);
+
   return (
     <nav>
       <div className="container">
@@ -23,7 +29,23 @@ export default function Navbar() {
             ))}
           </div>
 
-          <button className={s.button}>Contact</button>
+          <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
+            <button className={s.button}>Contact</button>
+            <button
+              onClick={() => setIsNavActive(!isNavActive)}
+              className={s.menuBtn}
+            >
+              {isNavActive ? <GrClose size={30} /> : <RiMenuLine size={30} />}
+            </button>
+          </div>
+
+          <div className={isNavActive ? s.mobileMenu : "hidden"}>
+            {navLinks.map((link) => (
+              <Link key={link.id} className={s.link} to={link.href}>
+                {link.title}
+              </Link>
+            ))}
+          </div>
         </div>
       </div>
     </nav>
