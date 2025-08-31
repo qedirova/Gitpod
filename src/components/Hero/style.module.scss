@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  gap: 50px;
+  max-width: 1310px;
+}
+
+.h1 {
+  font-size: 80px;
+  font-weight: 700;
+  line-height: 80px;
+}
+
+.p1 {
+  font-size: 23px;
+  font-weight: 400;
+  opacity: 0.7;
+}
+
+.button {
+  background-color: #ffae33;
+  padding: 12px 46px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 16px;
+  cursor: pointer;
+}
+
+.p {
+  opacity: 0.7;
+}
+
+.text1 {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
