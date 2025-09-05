@@ -1,0 +1,41 @@
+.wrapper {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+h1 {
+  font-size: 54px;
+  font-weight: 700;
+}
+
+.reviewsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 17px;
+  margin: 0 auto;
+}
+
+.review {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 44px 25px;
+  text-align: left;
+}
+
+.reviewText {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.reviewAuthor {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+}
+
+strong {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+}
