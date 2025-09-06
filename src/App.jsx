@@ -4,14 +4,15 @@ import Steps from "./components/Steps/Steps";
 import RemoteFirst from "./components/Remote-first/RemoteFirst";
 import Reviews from "./components/Reviews/Reviews";
 import Footer from "./components/Footer/Footer";
-// import Enviroments from "./components/Enviroments/Enviroments";
+import Enviroments from "./components/Enviroments/Enviroments";
+
 
 function App() {
   return (
     <>
       <Hero />
       <Steps />
-      {/* <Enviroments /> */}
+     <Enviroments />
       <RemoteFirst />
       <Reviews />
       <Footer />
