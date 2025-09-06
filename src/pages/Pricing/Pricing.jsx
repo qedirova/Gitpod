@@ -1,6 +1,16 @@
 import React from "react";
 import s from "./style.module.scss";
+import {PricingBox} from "../../components/PricingBox/PricingBox";
 
 export default function Pricing() {
-  return <div>Pricing</div>;
+  return (
+    <div>
+      <div className={s.main}>
+          <h1 className={s.pricingTitle}>Pricing</h1>
+          <p>Get more Gitpod, pay less.</p>
+        <button className={s.btn}>Try now</button>
+      </div>
+        <PricingBox/>
+    </div>
+  );
 }

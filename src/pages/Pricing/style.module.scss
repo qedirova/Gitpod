@@ -1,0 +1,33 @@
+.main {
+  background-color: #ffae33;
+  z-index: 1;
+  height: 50vh !important;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  align-items: center;
+  justify-content: center;
+
+}
+.pricingTitle {
+  font-size: 80px;
+  font-weight: 700;
+  color: #fff;
+}
+
+p {
+  font-size: 23px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.btn {
+  background-color: #fff;
+  max-width: 170px;
+  border-radius: 16px;
+  padding: 12px 51px;
+  border: none;
+  font-size: 18px;
+  font-weight: 700;
+  margin-top: 24px;
+}
