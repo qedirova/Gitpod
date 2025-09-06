@@ -1,17 +1,17 @@
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 47px;
   text-align: center;
+  padding-bottom: 170px;
+
+  h1 {
+    font-size: 54px;
+    font-weight: 700;
+  }
 }
 
-h1 {
-  font-size: 54px;
-  font-weight: 700;
-}
-
-// .img {
-//   max-width: 1269px;
-// }
-
-.p {
+.paragraph {
   font-size: 24px;
   font-weight: 400;
   opacity: 0.7;
@@ -21,6 +21,7 @@ h1 {
 
 .icons {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   gap: 16px;
@@ -28,6 +29,28 @@ h1 {
 
 @media (max-width: 1400px) {
   .img {
-    max-width: 50% !important;
+    width: 100%;
+  }
+}
+
+@media (max-width: 950px) {
+  .wrapper {
+    h1 {
+      font-size: 40px;
+    }
+
+    .paragraph {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+  .wrapper {
+    gap: 16px;
+    h1 {
+      font-size: 30px;
+      line-height: 40px;
+    }
   }
 }

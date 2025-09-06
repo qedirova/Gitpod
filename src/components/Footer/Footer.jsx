@@ -1,100 +1,41 @@
 import s from "./style.module.scss";
-import React from "react";
+import { FooterColumn } from "../FooterColumn/FooterColumn";
 
 export default function Footer() {
+  const gitpodLinks = [
+    { id: 1, title: "Home" },
+    { id: 2, title: "Features" },
+    { id: 3, title: "Pricing" },
+    { id: 4, title: "Changelog" },
+    { id: 5, title: "Self-Hosted" },
+    { id: 6, title: "Status" },
+  ];
+
+  const developerLinks = [
+    { id: 1, title: "Getting started" },
+    { id: 2, title: "Screencasts" },
+    { id: 3, title: "Blog" },
+    { id: 4, title: "Documentation" },
+    { id: 5, title: "Report a bug" },
+    { id: 6, title: "Community" },
+  ];
   return (
     <footer>
-      <div className={s.container}>
-        <div className={s.column}>
-          <h4 className={s.heading}>Gitpod</h4>
-          <ul className={s.list}>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">Features</a>
-            </li>
-            <li>
-              <a href="#">Pricing</a>
-            </li>
-            <li>
-              <a href="#">Changelog</a>
-            </li>
-            <li>
-              <a href="#">Self-Hosted</a>
-            </li>
-            <li>
-              <a href="#">Gitpod vs GitHub Codespaces</a>
-            </li>
-            <li>
-              <a href="#">Status</a>
-            </li>
-          </ul>
+      <div className="container">
+        <div className={s.wrapper}>
+          <FooterColumn title={"Gitpod"} data={gitpodLinks} />
+          <FooterColumn title={"Developer"} data={developerLinks} />
+          <FooterColumn title={"Company"} data={gitpodLinks} />
+          <FooterColumn title={"Legal"} data={developerLinks} />
         </div>
 
-        <div className={s.column}>
-          <h4 className={s.heading}>Developer</h4>
-          <ul className={s.list}>
-            <li>
-              <a href="#">Getting started</a>
-            </li>
-            <li>
-              <a href="#">Screencasts</a>
-            </li>
-            <li>
-              <a href="#">Blog</a>
-            </li>
-            <li>
-              <a href="#">Documentation</a>
-            </li>
-            <li>
-              <a href="#">Report a bug</a>
-            </li>
-            <li>
-              <a href="#">Community</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className={s.column}>
-          <h4 className={s.heading}>Company</h4>
-          <ul className={s.list}>
-            <li>
-              <a href="#">About</a>
-            </li>
-            <li>
-              <a href="#">Careers</a>
-            </li>
-            <li>
-              <a href="#">Contact</a>
-            </li>
-            <li>
-              <a href="#">Media Kit</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className={s.column}>
-          <h4 className={s.heading}>Legal</h4>
-          <ul className={s.list}>
-            <li>
-              <a href="#">Imprint</a>
-            </li>
-            <li>
-              <a href="#">Terms of Service</a>
-            </li>
-            <li>
-              <a href="#">Privacy Policy</a>
-            </li>
-          </ul>
-        </div>
-
-        <div className={s.logos}>
-          <div className={s.end}>
-            <img src="FooterLogo.svg" alt="FooterLogo" />
+        <div className={s.copyright}>
+          <div className={s.copyrightText}>
+            <img src="/FooterLogo.svg" alt="FooterLogo" />
             Copyright © 2021 Gitpod
           </div>
-          <img src="Logos.png" alt="logos" />
+
+          <img src="/Logos.png" alt="" />
         </div>
       </div>
     </footer>
