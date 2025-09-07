@@ -57,19 +57,6 @@ export default function Reviews() {
             </div>
           ))}
         </div>
-        <div className={s.brands}>
-          <img src="/gitLab.svg" alt="gitLab" />
-          <img src="/freeCodeCamp.svg" alt="freeCodeCamp" />
-          <img src="/Wave.svg" alt="Wave" />
-          <img src="/Google.svg" alt="Google" />
-          <img src="/Amazon.svg" alt="Amazon" />
-          <img src="/Facebook.svg" alt="Facebook" />
-          <img src="/Uber.svg" alt="Uber" />
-          <img src="/Intel.svg" alt="Intel" />
-          <img src="/Theia.svg" alt="Theia" />
-          <img src="/Code.svg" alt="Code" />
-          <img src="/4Geeks.svg" alt="4Geeks" />
-        </div>
       </div>
     </div>
   );

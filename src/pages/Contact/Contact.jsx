@@ -1,14 +1,11 @@
-import React from "react";
+import SectionHero from "../../components/SectionHero/SectionHero";
 import s from "./style.module.scss";
 import React from "react";
 
 export default function Contact() {
   return (
     <div>
-      <div className={s.main}>
-        <h1 className={s.contactTitle}>Contact</h1>
-        <div className={s.text}>Get in touch with us today!</div>
-      </div>
+      <SectionHero title={"Contact"} text={"Get in touch with us today!"} />
     </div>
   );
 }

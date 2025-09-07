@@ -1,5 +1,6 @@
 import s from "./style.module.scss";
 import { FooterColumn } from "../FooterColumn/FooterColumn";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const gitpodLinks = [
@@ -36,8 +37,8 @@ export default function Footer() {
         <div className={s.wrapper}>
           <FooterColumn title={"Gitpod"} data={gitpodLinks} />
           <FooterColumn title={"Developer"} data={developerLinks} />
-          <FooterColumn title={"Company"} data={gitpodLinks} />
-          <FooterColumn title={"Legal"} data={developerLinks} />
+          <FooterColumn title={"Company"} data={companyLinks} />
+          <FooterColumn title={"Legal"} data={legalLinks} />
         </div>
 
         <div className={s.copyright}>
@@ -46,10 +47,15 @@ export default function Footer() {
             Copyright © 2021 Gitpod
           </div>
           <div className={s.logos}>
-            {" "}
-            <img src="/Twitter.svg" alt="TwitterLogo" />
-            <img src="/GitHub.svg" alt="GitHubLogo" />
-            <img src="/SMS.svg" alt="SMSLogo" />
+            <Link to={"/"}>
+              <img src="/Twitter.svg" alt="TwitterLogo" />
+            </Link>
+            <Link to={"/"}>
+              <img src="/GitHub.svg" alt="GitHubLogo" />
+            </Link>
+            <Link to={"/"}>
+              <img src="/SMS.svg" alt="SMSLogo" />
+            </Link>
           </div>
         </div>
       </div>
