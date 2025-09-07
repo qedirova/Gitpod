@@ -25,6 +25,11 @@ footer {
   gap: 16px;
 }
 
+.logos {
+  display: flex;
+  gap: 16px;
+}
+
 @media (max-width: 1200px) {
   footer {
     padding-left: 32px;

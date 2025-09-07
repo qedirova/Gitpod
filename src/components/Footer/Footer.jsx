@@ -19,6 +19,17 @@ export default function Footer() {
     { id: 5, title: "Report a bug" },
     { id: 6, title: "Community" },
   ];
+  const companyLinks = [
+    { id: 1, title: "About" },
+    { id: 2, title: "Careers" },
+    { id: 3, title: "Contact" },
+    { id: 4, title: "Medi Kit" },
+  ];
+  const legalLinks = [
+    { id: 1, title: "Imprint" },
+    { id: 2, title: "Term of Service" },
+    { id: 3, title: "Pivacy Policy" },
+  ];
   return (
     <footer>
       <div className="container">
@@ -34,8 +45,12 @@ export default function Footer() {
             <img src="/FooterLogo.svg" alt="FooterLogo" />
             Copyright © 2021 Gitpod
           </div>
-
-          <img src="/Logos.png" alt="" />
+          <div className={s.logos}>
+            {" "}
+            <img src="/Twitter.svg" alt="TwitterLogo" />
+            <img src="/GitHub.svg" alt="GitHubLogo" />
+            <img src="/SMS.svg" alt="SMSLogo" />
+          </div>
         </div>
       </div>
     </footer>
