@@ -2,7 +2,7 @@ import s from "./style.module.scss";
 import { Link } from "react-router-dom";
 import { RiMenuLine } from "react-icons/ri";
 import { GrClose } from "react-icons/gr";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Navbar() {
   const navLinks = [
@@ -12,6 +12,12 @@ export default function Navbar() {
   ];
 
   const [isNavActive, setIsNavActive] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("click", () => {
+      setIsNavActive(false);
+    });
+  }, []);
 
   return (
     <nav>
@@ -32,7 +38,10 @@ export default function Navbar() {
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
             <button className={s.button}>Contact</button>
             <button
-              onClick={() => setIsNavActive(!isNavActive)}
+              onClick={(e) => {
+                e.stopPropagation();
+                setIsNavActive(!isNavActive);
+              }}
               className={s.menuBtn}
             >
               {isNavActive ? <GrClose size={30} /> : <RiMenuLine size={30} />}
